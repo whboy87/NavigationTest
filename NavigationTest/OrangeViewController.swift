@@ -15,6 +15,7 @@ class OrangeViewController: UIViewController {
     @IBAction func done(_ sender: Any) {
         if let myDelegate = delegate, let myStr = textField.text {
             myDelegate.sendText(newText: myStr)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
