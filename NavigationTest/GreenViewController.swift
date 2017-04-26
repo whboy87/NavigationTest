@@ -1,5 +1,5 @@
 //
-//  SkyViewController.swift
+//  GreenViewController.swift
 //  NavigationTest
 //
 //  Created by SDS-012 on 2017. 4. 26..
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class SkyViewController: UIViewController {
-
-    @IBOutlet var textField: UITextField!
-
-    @IBAction func sendStr(_ sender: Any) {
-        self.performSegue(withIdentifier: "goGreen", sender: self)
-    }
+class GreenViewController: UIViewController {
     
+    @IBOutlet var myStrLabel: UILabel!
+    
+    var myStr: String? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let str = myStr {
+            myStrLabel.text = str
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,18 +30,14 @@ class SkyViewController: UIViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if let vc = segue.destination as? GreenViewController {
-            vc.myStr = textField.text
-        }
     }
-    
+    */
 
 }

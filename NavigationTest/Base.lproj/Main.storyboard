@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-mP-cMW">
-                                <rect key="frame" x="161" y="253" width="52" height="30"/>
+                                <rect key="frame" x="161" y="318" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음화면"/>
                                 <connections>
@@ -49,13 +49,65 @@
                     <view key="view" contentMode="scaleToFill" id="k0H-61-caZ" customClass="SCNView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-W2-mBH">
+                                <rect key="frame" x="90" y="126" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET6-A5-5au">
+                                <rect key="frame" x="172" y="194" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="전송"/>
+                                <connections>
+                                    <action selector="sendStr:" destination="SaH-D4-ozD" eventType="touchUpInside" id="Dff-Fk-Xdy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.85215309023846586" green="1" blue="0.99156318695026036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sky" id="5Dv-vl-nMw"/>
+                    <connections>
+                        <outlet property="textField" destination="tIQ-W2-mBH" id="KHT-Y6-oD6"/>
+                        <segue destination="XHG-Q5-Vv7" kind="show" identifier="goGreen" id="U0D-yg-zJk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyp-Mo-Zko" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-667"/>
+            <point key="canvasLocation" x="1784.8" y="-667.01649175412297"/>
+        </scene>
+        <!--Green-->
+        <scene sceneID="2ZK-19-zaD">
+            <objects>
+                <viewController id="XHG-Q5-Vv7" customClass="GreenViewController" customModule="NavigationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l4y-Yc-Zer"/>
+                        <viewControllerLayoutGuide type="bottom" id="SFP-mI-zl1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KNH-Wn-CI7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwo-dS-wsK">
+                                <rect key="frame" x="16" y="139" width="343" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78787247930000004" green="1" blue="0.72583385249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Green" id="0xQ-eh-bZ0"/>
+                    <connections>
+                        <outlet property="myStrLabel" destination="zwo-dS-wsK" id="luO-NQ-gDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFn-DA-IQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605.5999999999999" y="-667.01649175412297"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iqg-wS-thR">
