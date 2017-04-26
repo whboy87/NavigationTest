@@ -1,5 +1,5 @@
 //
-//  GreenViewController.swift
+//  RedViewController.swift
 //  NavigationTest
 //
 //  Created by SDS-012 on 2017. 4. 26..
@@ -8,22 +8,14 @@
 
 import UIKit
 
-class GreenViewController: UIViewController {
-    
-    @IBOutlet var myStrLabel: UILabel!
-    
-    var myStr: String? = nil
+class RedViewController: UIViewController {
 
+    @IBOutlet var myLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if let str = myStr {
-            myStrLabel.text = str
-        } else if let appdelegate =  UIApplication.shared.delegate as? AppDelegate {
-            myStrLabel.text = appdelegate.myName
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +23,9 @@ class GreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func sendText(newText: String) {
+        myLabel.text = newText
+    }
 
     /*
     // MARK: - Navigation

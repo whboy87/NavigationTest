@@ -14,6 +14,9 @@
 		251069B61EB05C5E00FFADA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251069B41EB05C5E00FFADA8 /* LaunchScreen.storyboard */; };
 		251069BE1EB0624900FFADA8 /* SkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251069BD1EB0624900FFADA8 /* SkyViewController.swift */; };
 		251069C01EB0687A00FFADA8 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251069BF1EB0687A00FFADA8 /* GreenViewController.swift */; };
+		251069C21EB0788900FFADA8 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251069C11EB0788900FFADA8 /* YellowViewController.swift */; };
+		251069C41EB0789700FFADA8 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251069C31EB0789700FFADA8 /* RedViewController.swift */; };
+		251069C61EB078AF00FFADA8 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251069C51EB078AF00FFADA8 /* OrangeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		251069B71EB05C5E00FFADA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251069BD1EB0624900FFADA8 /* SkyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkyViewController.swift; path = ../SkyViewController.swift; sourceTree = "<group>"; };
 		251069BF1EB0687A00FFADA8 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		251069C11EB0788900FFADA8 /* YellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		251069C31EB0789700FFADA8 /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		251069C51EB078AF00FFADA8 /* OrangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				251069AB1EB05C5E00FFADA8 /* AppDelegate.swift */,
 				251069AD1EB05C5E00FFADA8 /* ViewController.swift */,
 				251069AF1EB05C5E00FFADA8 /* Main.storyboard */,
+				251069C11EB0788900FFADA8 /* YellowViewController.swift */,
+				251069C31EB0789700FFADA8 /* RedViewController.swift */,
+				251069C51EB078AF00FFADA8 /* OrangeViewController.swift */,
 				251069BF1EB0687A00FFADA8 /* GreenViewController.swift */,
 				251069B21EB05C5E00FFADA8 /* Assets.xcassets */,
 				251069B41EB05C5E00FFADA8 /* LaunchScreen.storyboard */,
@@ -146,6 +155,9 @@
 				251069AE1EB05C5E00FFADA8 /* ViewController.swift in Sources */,
 				251069BE1EB0624900FFADA8 /* SkyViewController.swift in Sources */,
 				251069AC1EB05C5E00FFADA8 /* AppDelegate.swift in Sources */,
+				251069C41EB0789700FFADA8 /* RedViewController.swift in Sources */,
+				251069C61EB078AF00FFADA8 /* OrangeViewController.swift in Sources */,
+				251069C21EB0788900FFADA8 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
