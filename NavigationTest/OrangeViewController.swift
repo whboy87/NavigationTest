@@ -9,7 +9,7 @@
 import UIKit
 
 class OrangeViewController: UIViewController {
-
+    
     @IBOutlet var textField: UITextField!
     
     @IBAction func done(_ sender: Any) {
@@ -30,6 +30,10 @@ class OrangeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func changeBackColor(_ f:(UIColor) -> ()) {
+        f(UIColor.brown)
     }
     
 

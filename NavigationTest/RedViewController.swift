@@ -37,6 +37,11 @@ class RedViewController: UIViewController {
         
         if let vc = segue.destination as? OrangeViewController {
             vc.delegate = self
+            
+            vc.changeBackColor {
+                (color: UIColor) -> () in
+                self.view.backgroundColor = color
+            }
         }
     }
     
