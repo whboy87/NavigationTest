@@ -14,6 +14,17 @@ class GreenViewController: UIViewController {
     
     var myStr: String? = nil
 
+    @IBAction func changeBackColor(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "CHANGE_COLOR"), object: nil, userInfo: nil)
+    }
+    
+    @IBAction func delegateChangeBackColor(_ sender: Any) {
+        
+        if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+            appdelegate.bgColor = UIColor.yellow
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

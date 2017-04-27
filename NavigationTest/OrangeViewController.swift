@@ -13,18 +13,30 @@ class OrangeViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     
     @IBAction func done(_ sender: Any) {
+        
+        if let afunc = myFunc {
+            afunc(UIColor.brown)
+        }
+        
         if let myDelegate = delegate, let myStr = textField.text {
             myDelegate.sendText(newText: myStr)
             self.navigationController?.popViewController(animated: true)
         }
     }
     
+    var myFunc:((UIColor) -> ())? = nil
+    
     var delegate: RedViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(self, selector: #selector(changeColor(notification:)), name: NSNotification.Name.init(rawValue: "CHANGE_COLOR"), object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    func changeColor(notification: NSNotification) {
+        self.view.backgroundColor = UIColor.blue
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,8 +44,8 @@ class OrangeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func changeBackColor(_ f:(UIColor) -> ()) {
-        f(UIColor.brown)
+    func changeBackColor(_ f:@escaping (UIColor) -> ()) {
+        self.myFunc = f
     }
     
 

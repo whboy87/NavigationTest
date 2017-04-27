@@ -27,6 +27,13 @@ class SkyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+            self.view.backgroundColor = appdelegate.bgColor
+        }
+        
+    }
 
     
     // MARK: - Navigation
